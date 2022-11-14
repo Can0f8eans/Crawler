@@ -3,7 +3,7 @@ A CLI Dungeon Crawler, with wholly randomly-generated floors
 
 This is just a pet project involving python and classes.
 My goal was to create a randomly generated dungeon with a theoretical infinite amount of floors.
-You're goal is to get as far as you can.
+Your goal is to get as far as you can.
 
 # Pre 1.0 Release
 This is a pre-alpha release, as such it is chock full of bugs. If you wish, you can post a concise bug report 
