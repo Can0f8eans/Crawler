@@ -1,9 +1,7 @@
-#0.3
-
-  - Fixed two lines that would kill the program if run
-
-#0.2
-
-  - Fixed a bug where if the player ran the info command
-after killing a monster, the program would not 
-print out the dead monster's name correctly
+changelog:
+    11/14/22 - crawler 0.5
+        - reworked the map generation so now it is truly random and not a sqare
+        - added the feature where enemies may be asleep when you enter a room and wake when/if you leave the room
+        - fixed some bugs regarding the stat command.
+        - fixed bugs regarding the exit commands 
+        - general bug fixes 
