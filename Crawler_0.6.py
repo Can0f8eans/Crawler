@@ -1,7 +1,6 @@
 ''''to do:
 - work on creating a save file that tracks ur stats
-- make map generation
-- add make it possible to wake enemies upon leaving the room '''
+- make map generation'''
 import random
 import math
 
