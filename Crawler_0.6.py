@@ -3,29 +3,6 @@
 - make map generation'''
 import random
 import math
-
-def join_room_w2e(roomList):
-    '''A helper function that joins the generated rooms, linking
-    them together to enable traversing the rooms.'''
-    for i in range(len(roomList)):
-        if i + 1 > len(roomList)-1:
-            roomList[i].e = None
-        else:
-            roomList[i].e = roomList[i+1]
-            roomList[i+1].w = roomList[i]
-    return roomList
-def join_room_n2s(roomList):
-    '''Similar in principle to join_room_w2e, this helper 
-    function joins the rooms vertically.'''
-    for i in (range(len(roomList))):
-        for j in reversed(range(len(roomList[i]))):
-            if i + 1 > len(roomList)-1:
-                roomList[i][j].n = None
-            else:
-                roomList[i][j].n = roomList[i+1][j]
-                roomList[i+1][j].s = roomList[i][j]
-        tempList = roomList[i]
-    return roomList
 def build_map(roomTotal):
     '''This function generates the map to the number of rooms
     specified by the initial value provided. Then, using random,
@@ -73,22 +50,6 @@ def stringMap(room, dir, maxNum, roomNum):
 
         for door in specifiedDoors:
             stringMap(curRoom,door,curNum,roomNum)
-def build_grid(width, height):
-    '''This function generates a python list which contains all of the 
-    rooms. Then using this list, it links together the rooms and 
-    returns the origin, aka first or starting room.'''
-    roomList = []
-    for i in range(height):
-        tempList = []
-        for j in range(width):
-            tempRoom = Room(f"{i},{j}",None,None,None,None)
-            tempList.append(tempRoom)
-            if j ==0 and i == 0:
-                origin = tempRoom
-        tempList = join_room_w2e(tempList)
-        roomList.append(tempList)
-    roomList = join_room_n2s(roomList)
-    return origin
 def setItemType(itemTypeNum):
     if itemTypeNum == 0:
         item = Food()
